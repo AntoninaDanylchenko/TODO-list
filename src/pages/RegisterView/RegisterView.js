@@ -10,7 +10,6 @@ const RegisterView = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // const newUser = ;
     dispatch(register({ name, email, password }));
     reset();
   };
