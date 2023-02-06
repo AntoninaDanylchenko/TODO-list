@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTodos } from 'redux/todos/operations';
 import { selectVisibleTodos } from 'redux/todos/selectorsTodo';
+import css from './TodoList.module.css';
 
 const TodoList = () => {
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ const TodoList = () => {
   console.log(todos);
   return (
     todos && (
-      <ul>
+      <ul className={css.list}>
         {todos.map(todo => (
           <li key={todo.id}>
             <Todo todo={todo} />

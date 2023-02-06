@@ -1,4 +1,4 @@
-import { addTodo, fetchTodos, deleteTodo, toggleCompleted } from './operations';
+import { addTodo, fetchTodos, deleteTodo } from './operations';
 import { statusFilters } from './constants';
 import { createSlice } from '@reduxjs/toolkit';
 
@@ -30,7 +30,6 @@ const todosSlice = createSlice({
       state.isLoading = false;
       state.error = null;
       state.todos = action.payload;
-      console.log(state);
     },
     [fetchTodos.rejected]: handleRejected,
     [addTodo.pending]: handlePending,
@@ -50,16 +49,16 @@ const todosSlice = createSlice({
       state.todos.splice(index, 1);
     },
     [deleteTodo.rejected]: handleRejected,
-    [toggleCompleted.pending]: handlePending,
-    [toggleCompleted.fulfilled](state, action) {
-      state.isLoading = false;
-      state.error = null;
-      const index = state.todos.findIndex(
-        task => task.id === action.payload.id
-      );
-      state.todos.splice(index, 1, action.payload);
-    },
-    [toggleCompleted.rejected]: handleRejected,
+    // [toggleCompleted.pending]: handlePending,
+    // [toggleCompleted.fulfilled](state, action) {
+    //   state.isLoading = false;
+    //   state.error = null;
+    //   const index = state.todos.findIndex(
+    //     task => task.id === action.payload.id
+    //   );
+    //   state.todos.splice(index, 1, action.payload);
+    // },
+    // [toggleCompleted.rejected]: handleRejected,
   },
 });
 

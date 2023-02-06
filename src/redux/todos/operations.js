@@ -39,16 +39,16 @@ export const deleteTodo = createAsyncThunk(
   }
 );
 
-export const toggleCompleted = createAsyncThunk(
-  'todos/toggleCompleted',
-  async (todo, thunkAPI) => {
-    try {
-      const response = await axios.put(`/tasks/${todo.id}`, {
-        completed: !todo.completed,
-      });
-      return response.data;
-    } catch (e) {
-      return thunkAPI.rejectWithValue(e.message);
-    }
-  }
-);
+// export const toggleCompleted = createAsyncThunk(
+//   'todos/toggleCompleted',
+//   async (todo, thunkAPI) => {
+//     try {
+//       const response = await axios.put(`/tasks/${todo.id}`, {
+//         completed: !todo.completed,
+//       });
+//       return response.data;
+//     } catch (e) {
+//       return thunkAPI.rejectWithValue(e.message);
+//     }
+//   }
+// );

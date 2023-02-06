@@ -1,16 +1,19 @@
-const { NavLink } = require('react-router-dom');
+import AuthNav from 'components/AuthNav';
+import css from './Navigation.module.css';
+import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
+  const { isLoggedIn } = AuthNav();
   return (
     <nav>
-      <ul>
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/todos">Todo list</NavLink>
-        </li>
-      </ul>
+      <NavLink className={css.link} to="/">
+        Home
+      </NavLink>
+      {isLoggedIn && (
+        <NavLink className={css.link} to="/tasks">
+          Tasks
+        </NavLink>
+      )}
     </nav>
   );
 };

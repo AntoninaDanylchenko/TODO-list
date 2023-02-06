@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addTodo } from 'redux/todos/operations';
+import css from './TodoEditor.module.css';
 
 const TodoEditor = () => {
   const dispatch = useDispatch();
@@ -17,22 +18,18 @@ const TodoEditor = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={css.form}>
       <input
         name="text"
         value={text}
         onChange={e => setText(e.currentTarget.value)}
+        className={css.input}
       />
-      <button type="submit">Add task</button>
+      <button type="submit" className={css.button}>
+        Add task
+      </button>
     </form>
   );
 };
 
 export default TodoEditor;
-
-//  <form className={css.form} onSubmit={handleSubmit}>
-//    <input name="text" className={css.input} />
-//    <button type="submit" className={css.button}>
-//      Add task
-//    </button>
-//  </form>;

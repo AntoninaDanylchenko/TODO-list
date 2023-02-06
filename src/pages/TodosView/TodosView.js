@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import { selectIsLoading } from 'redux/todos/selectorsTodo';
 import TodoEditor from 'components/TodoEditor';
 import TodoList from 'components/TodoList';
+import { Helmet } from 'react-helmet';
 // import { fetchTodos } from 'redux/todos/operations';
 
 const TodoViews = () => {
@@ -9,7 +10,9 @@ const TodoViews = () => {
 
   return (
     <>
-      <h1>Your tasks</h1>
+      <Helmet>
+        <title>Your tasks</title>
+      </Helmet>
       <TodoEditor />
       <div>{isLoading && 'Request in progress...'}</div>
       <TodoList />
