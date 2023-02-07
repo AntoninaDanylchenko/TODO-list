@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TODO-list/static/css/main.a32f356c.css",
-    "main.js": "/TODO-list/static/js/main.3d015579.js",
+    "main.js": "/TODO-list/static/js/main.3928b9e3.js",
     "static/css/428.a1b0a5b7.chunk.css": "/TODO-list/static/css/428.a1b0a5b7.chunk.css",
     "static/js/428.8126404d.chunk.js": "/TODO-list/static/js/428.8126404d.chunk.js",
     "static/css/33.6cdfe337.chunk.css": "/TODO-list/static/css/33.6cdfe337.chunk.css",
@@ -13,7 +13,7 @@
     "static/js/270.898b07bc.chunk.js": "/TODO-list/static/js/270.898b07bc.chunk.js",
     "index.html": "/TODO-list/index.html",
     "main.a32f356c.css.map": "/TODO-list/static/css/main.a32f356c.css.map",
-    "main.3d015579.js.map": "/TODO-list/static/js/main.3d015579.js.map",
+    "main.3928b9e3.js.map": "/TODO-list/static/js/main.3928b9e3.js.map",
     "428.a1b0a5b7.chunk.css.map": "/TODO-list/static/css/428.a1b0a5b7.chunk.css.map",
     "428.8126404d.chunk.js.map": "/TODO-list/static/js/428.8126404d.chunk.js.map",
     "33.6cdfe337.chunk.css.map": "/TODO-list/static/css/33.6cdfe337.chunk.css.map",
@@ -26,6 +26,6 @@
   },
   "entrypoints": [
     "static/css/main.a32f356c.css",
-    "static/js/main.3d015579.js"
+    "static/js/main.3928b9e3.js"
   ]
 }
